@@ -1,14 +1,25 @@
-const box = document.getElementById('boxsection');
-for(let i=1; i <=100; i++){
-boxsection.innerHTML += `
-<div class="box">${i}</div>`
+for (let i = 1; i <= 100; i++){
+
+  let text, boxClass;
+
+  if(i % 15 === 0 ){
+    text = 'X'
+    boxClass = '.FizzBuzz'
+  }else if (i % 5 === 0){
+    text = 'N';
+    boxClass = 'box';
+  }else if (i % 3 === 0){
+    text = 'X';
+    boxClass = '.Fizz';
+  }else{
+    text = i;
+    boxClass = 'ciao';
+  }
+
+
+const box = document.createElement('div')
+box.classList = 'box';
+if(boxClass.lenght > 0) box.classList.add(boxClass);
+box.append(text);
+document.querySelector('.boxsection').append(box);
 }
-
-  if( i % 5 === 0 ) {
-  box.innerHTML = 'FizzBuzz'
-  box.classList = 'green'
-  } 
-
-zegtadnn edgtanowsybhugrvbn0up+ W8erfh 08WUAFYH 08w+q83F0RYQA f098FEHY+
-
-// else if{ box.innerHTML = `${i}` }
